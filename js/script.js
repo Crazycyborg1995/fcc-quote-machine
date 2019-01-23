@@ -37,7 +37,7 @@ function loadQuotes(){
   $('#text').hide().fadeIn(600).text(quotes[i].quote);
   $("#author h3").hide().fadeIn(600).text(quotes[i].author[0])
   $("#author h1").hide().fadeIn(600).text(quotes[i].author[1]);
-  $("#quote-box").css("background-color",quotes[i].color);
+  $("body").css("background-color",quotes[i].color);
   $("#tweet-quote,#new-quote").css("color",quotes[i].color);
 }
 
