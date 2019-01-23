@@ -83,7 +83,7 @@ display: inline-block;
   font-size: 2em;
 }
 
-@media (max-width:776px){
+@media (max-width:50em){
   #quote-box{
     grid-template-areas: 'author'
                          'quotes'
@@ -103,15 +103,20 @@ display: inline-block;
   }
 
 }
-@media (max-width:577px){
+@media (max-width:36em){
 
   h3,p{
-    font-size: 0.9em;
+    font-size: 1em;
   }
   h1{
     font-size: 1.3em;
   }
   .btn-container{
     align-self: center;
+  }
+}
+@media(max-width:27em){
+  h3,p{
+    font-size: 0.8em;
   }
 }
