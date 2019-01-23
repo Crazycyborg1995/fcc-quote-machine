@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  background-color: #FB3333;
+}
+#quote-box {
+  color: #fff;
+  height: 100vh;
+  display: grid;
+  padding: 1em;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 70vh 30vh;
+  grid-template-areas: 'quotes author'
+                       'social author';
+  grid-gap: 1em;
+
+}
+
+.text-container {
+  grid-area: quotes;
+  font-size: 3em;
+  align-self: end;
+  text-align: center;
+}
+
+#text:before {
+  content: '\f10d';
+  font-family: 'Font Awesome 5 Free';
+  display: inline-block;
+  margin-right: 0.2em;
+  vertical-align: text-top;
+  font-weight: 900;
+}
+#text:after {
+content:"";
+margin-left: 5px;
+height: 8px;
+width: 8px;
+border-radius: 50%;
+background: #fff;
+display: inline-block;
+}
+
+#author{
+  grid-area: author;
+  writing-mode: vertical-rl;
+  text-align: right;
+  font-size:3em;
+  align-self: center;
+  justify-self:start;
+}
+.btn-container{
+  grid-area:social;
+  justify-self: center;
+  display: flex;
+  text-align:center;
+}
+#tweet-quote,#new-quote{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border: 1px solid;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+}
+#tweet-quote{
+  text-decoration: none;
+  margin-right: 0.5em;
+}
+#tweet-quote i,#new-quote i {
+  font-size: 2em;
+}
+
+@media (max-width:776px){
+  #quote-box{
+    grid-template-areas: 'author'
+                         'quotes'
+                         'social';
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 5fr 2fr;
+    grid-gap: 0;
+
+  }
+  #author{
+    writing-mode: horizontal-tb;
+    text-align:right;
+    justify-self: end;
+  }
+  .text-container{
+    align-self: center;
+  }
+
+}
+@media (max-width:577px){
+
+  h3,p{
+    font-size: 0.9em;
+  }
+  h1{
+    font-size: 1.3em;
+  }
+  .btn-container{
+    align-self: center;
+  }
+}
